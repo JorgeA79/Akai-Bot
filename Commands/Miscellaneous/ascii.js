@@ -5,7 +5,7 @@ const figlet = require('figlet');
         constructor() {
             super('ascii', {
                 aliases: ['ascii', 'ascii-art'],
-                category: 'API',
+                category: 'Miscellaneous',
                 args: [{ 
                     id: 'one', type: 'string', match: 'content', default: null, 
                         prompt: {
