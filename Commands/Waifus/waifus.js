@@ -52,11 +52,11 @@ registerFont('./Bebas.ttf', { family: 'Bebas' })
 
 const applyText = (canvas, text) => {
 	const ctx = canvas.getContext('2d');
-	let fontSize = 55;
+	let fontSize = 70;
 	do {
 
 	ctx.font = `${fontSize -= 10}px Bebas`;
-	} while (ctx.measureText(text).width > canvas.width - 270);
+	} while (ctx.measureText(text).width > canvas.width - 500);
 	return ctx.font;
 };
 
