@@ -22,7 +22,7 @@ var jsonContent = JSON.parse(contents);
 
         async exec(message) {
             
-            const args = msg.content.slice(prefix.length).split(` `);
+            const args = message.content.slice('p!').split(` `);
 		
 	          if (!args[1]) {
 	          return message.channel.send("You need to specify a Waifu");
@@ -32,13 +32,13 @@ var jsonContent = JSON.parse(contents);
           	  "ATAGO":jsonContent.waifus[1],
 	          "SYLPHYN":jsonContent.waifus[2],	
 	           }
-	           const embed = new Discord.MessageEmbed()
+	           const embed = new MessageEmbed()
 	              .setTitle(waifus[args[1].toUpperCase()].displayName)
 	              .setDescription(waifus[args[1].toUpperCase()].description)
 	              .addField("Anime/Game:", waifus[args[1].toUpperCase()].anime, true)
 	              .addField("Gender:", waifus[args[1].toUpperCase()].gender, true)
 	              .setThumbnail(waifus[args[1].toUpperCase()].image)
-	           return msg.channel.send(embed);
+	           return message.channel.send(embed);
             
         }
     }
