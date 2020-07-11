@@ -1,5 +1,5 @@
 const { Command } = require('discord-akairo');
-const { MessageEmbed } = require('discord.js');
+const discord = require('discord.js');
 const fs = require('fs');
 
 var contents = fs.readFileSync("./JSON/waifus.json");
@@ -28,9 +28,11 @@ registerFont('./Bebas.ttf', { family: 'Bebas' })
 
         async exec(message) {
             
-          const canvas = Canvas.createCanvas(500, 500);
+          const canvas = Canvas.createCanvas(850, 1262);
 	  const ctx = canvas.getContext('2d');
-            
+          
+	  const attachment = new discord.MessageAttachment(canvas.toBuffer(), 'welcome-image.png');
+	  message.channel.send(`:round_pushpin:  |  Profile card of ${message.author.username}`, attachment);	
         }
     }
 
