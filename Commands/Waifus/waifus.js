@@ -55,7 +55,7 @@ registerFont('./Bebas.ttf', { family: 'Bebas' })
 	  .setImage('attachment://welcome-image.png');	 	
 	  message.channel.send(embed)
 	  .then(msg => { msg.react('❤️')
-		       }
+		       })
         }
     }
 
