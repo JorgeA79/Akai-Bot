@@ -3,26 +3,16 @@
     {
     "name": ["URARAKA","OCHACO"],
     "displayName":"Uraraka Ochaco",
-    "anime":"My Hero Academia", 
-    "gender":"Female",  
+    "anime":"My Hero Academia",  
     "description":"Ochaco is a very open-minded, nice, cheerful, lively, outgoing, and optimistic girl. She gets easily excited over little things and has a habit of overreacting with exaggerated facial expressions just like Izuku.",
-    "image":"https://i.pinimg.com/originals/7d/be/68/7dbe6823e96079297e7c976a5a1fdad3.png"
+    "image":"./Commands/Waifus/Cards/List/Atago.png"
     },
     {
     "name":["ATAGO"],
     "displayName":"Atago",
     "anime":"Azur Lane", 
-    "gender":"Female",  
     "description":"After the betrayal of the Crimson Axis by the deceitful Sirens, Atago was more than ready to reconcile and rejoin her Azur Lane comrades. Atago is the personification of an elder sister. She cares deeply for those that are close to her, and is a friendly and calm woman.",
-    "image":"https://pm1.narvii.com/6947/ec6a42dab9ba58c48e6b0dcf2447527114769f2ar1-850-1200v2_uhq.jpg"
-    },
-    {
-    "name":["SYLPHYN","SYLPHYNFORD","TACHIBANA"],
-    "displayName":"Sylphynford Tachibana",
-    "anime":"Himouto! Umaru-Chan", 
-    "gender":"Female",  
-    "description":"Sylphyn has long, wavy, sky-blue hair with two shorter strands that lay past her shoulders. On top of her head, her hair is held back by a white hairband with yellow flowers at the sides. Her eyes match the color of her hair with plus-shaped yellow pupils that resemble stars. She has a noticeable, cat-like mouth that she often wears in a smug expression.",
-    "image":"https://vignette.wikia.nocookie.net/himoto-umaruchan/images/9/9b/Tachibana_header.png/revision/latest?cb=20150825035806"
+    "image":"./Commands/Waifus/Cards/List/Uraraka.png"
     }
   ]
 }  
