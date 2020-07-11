@@ -1,6 +1,6 @@
 
     module.exports = {
-        defaultColor: '#87202F',
+        defaultColor: '#C76CF5',
         red: '#b53636',
         orange: '#b56536',
         yellow: '#afb536',
