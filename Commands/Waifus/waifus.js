@@ -28,12 +28,12 @@ registerFont('./Bebas.ttf', { family: 'Bebas' })
 
         async exec(message) {
             
-	 const waifu = jsonContent.waifus[Math.floor(Math.random() * jsonContent.waifus.length)]	
+	 const waifuI = jsonContent.waifus[Math.floor(Math.random() * jsonContent.waifus.length)]	
 		
           const canvas = Canvas.createCanvas(850, 1262);
 	  const ctx = canvas.getContext('2d');
           const bgl = await Canvas.loadImage('./Commands/Waifus/Cards/BackgroundL.png');
-	  const waifu = await Canvas.loadImage(waifu.image);		
+	  const waifu = await Canvas.loadImage(waifuI.image);		
 	  const cardl = await Canvas.loadImage('./Commands/Waifus/Cards/CardInfoL.png');			
 	  ctx.drawImage(bgl, 0, 0, canvas.width, canvas.height);
 	  ctx.drawImage(waifu, 34, 57, 786, 1164);	
