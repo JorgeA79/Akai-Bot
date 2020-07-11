@@ -4,7 +4,7 @@ class PrefixCommand extends Command {
     constructor() {
         super('prefix', {
             aliases: ['prefix'],
-            category: 'stuff',
+            category: 'Moderation',
             args: [
                 {
                     id: 'prefix',
