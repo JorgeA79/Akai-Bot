@@ -22,31 +22,22 @@ const { MessageEmbed } = require('discord.js');
 
         async exec(message) {
             
-            let member = message.mentions.users.first() || message.author;
+            let target = message.mentions.users.first() || message.author;
             
-            let roles = member.roles.first(15).filter(r => r.name !== '@everyone').sort((a, b) => b.position - a.position).map(r => r).join(', ');
-                if(member.roles.size > 16) roles += `**... 15/${member.roles.size - 1}**`;
-            let object = { online: `\`Online\` ${this.client.emojis.get('660283475223379988')}`, idle: `\`Idle\` ${this.client.emojis.get('660283475034636288')}`, dnd: `\`Do Not Disturb\` ${this.client.emojis.get('660283474527387649')}`, offline: `\`Offline\` ${this.client.emojis.get('660283474783109125')}`};
-            let object2 = { online: `${this.client.emojis.get('660283475223379988')}`, idle: `${this.client.emojis.get('660283475034636288')}`, dnd: `${this.client.emojis.get('660283474527387649')}`, offline: `${this.client.emojis.get('660283474783109125')}`};
-            let obj = { false: 'No', true: 'Yes'}   
-        
-            const embed = new MessageEmbed()
-                .setColor(member.displayHexColor)
-                .setTitle(`${object2[member.presence.status]} **${member.user.tag}'s User Information**`)
-                .setThumbnail(member.user.displayAvatarURL())
-                .addField('**User ID**', `\`${member.id}\``, true)
-                .addField('**User Nickname**', `\`${member.displayName}\``, true)
-                .addField('**User Discriminator**', `\`#${member.user.discriminator}\``, true)
-                .addField('**User Joined At**', `\`${new Date(member.joinedAt).toLocaleString('en-GB', { dateStyle: 'full' })}\``, true)
-                .addField('**User Created At**', `\`${new Date(member.user.createdAt).toLocaleString('en-GB', { dateStyle: 'full' })}\``, true)
-                .addField('**Bot User**', `\`${obj[member.user.bot]}\``, true)
-                .addField('**User Presence**', `${object[member.presence.status]}`, true)
-                .addField('**User Game**', `\`${member.presence.game || 'No Game'}\``, true)
-                .addField('**Boosting Since**', `\`${new Date(member.premiumSinceTimestamp).toLocaleString('en-GB', { dateStyle: 'full' }) || 'Never Boosted'}\``, true)
-                .addField('**User Permissions**', `\`\`\`${member.permissions.toArray().join(', ')}\`\`\``)
-                .addField('**Highest Role**', `${member.roles.highest || 'No highest role!'}`)
-                .addField(`**Roles [ ${member.roles.size - 1} ]**`, `${roles || 'No roles!'}`)
-            return message.util.send({ embed });
+             let uEmbed = new MessageEmbed()
+               .setColor(0xC76CF5)
+                .setTitle("User Info")
+                .setThumbnail(message.guild.iconURL({ format: 'jpg' }))
+                .setAuthor(`${target.username} Info`, target.displayAvatarURL({ format: 'jpg' }))
+                .addField("**Username:**", `${target.username}`, true)
+                .addField("**Discriminator:**", `${target.discriminator}`, true)
+                .addField("**ID:**", `${target.id}`, true)
+                .addField("**Status:**", `${target.presence.status}`, true)
+                .addField("**Created At:**", `${target.createdAt}`, true)
+                .setFooter(`PixelBot | Have a nice day!`);
+
+            message.channel.send(uEmbed);
+          
         }
     }
 
