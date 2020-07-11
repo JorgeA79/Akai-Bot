@@ -50,7 +50,7 @@ registerFont('./Bebas.ttf', { family: 'Bebas' })
   	  
 	  const embed = new discord.MessageEmbed()	
  	  .attachFile(attachment)
-	  .setImage(attachment);	
+	  .setImage('attachment://welcome-image.png');	 	
 	  message.channel.send(embed);	
         }
     }
