@@ -20,7 +20,10 @@ const { MessageEmbed } = require('discord.js');
             });
         }
 
-        async exec(message, { member }) {
+        async exec(message) {
+            
+            let member = message.mentions.users.first() || message.author;
+            
             let roles = member.roles.first(15).filter(r => r.name !== '@everyone').sort((a, b) => b.position - a.position).map(r => r).join(', ');
                 if(member.roles.size > 16) roles += `**... 15/${member.roles.size - 1}**`;
             let object = { online: `\`Online\` ${this.client.emojis.get('660283475223379988')}`, idle: `\`Idle\` ${this.client.emojis.get('660283475034636288')}`, dnd: `\`Do Not Disturb\` ${this.client.emojis.get('660283474527387649')}`, offline: `\`Offline\` ${this.client.emojis.get('660283474783109125')}`};
