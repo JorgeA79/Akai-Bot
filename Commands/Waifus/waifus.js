@@ -2,7 +2,7 @@ const { Command } = require('discord-akairo');
 const { MessageEmbed } = require('discord.js');
 const fs = require('fs');
 
-var contents = fs.readFileSync("./waifus.json");
+var contents = fs.readFileSync("./JSON/waifus.json");
 var jsonContent = JSON.parse(contents);
 
     class PingCommand extends Command {
@@ -27,9 +27,9 @@ var jsonContent = JSON.parse(contents);
 	          if (!args[1]) {
 	          return message.channel.send("You need to specify a Waifu");
 	          }
-            const waifus = {
+            	  const waifus = {
 	          "URARAKA":jsonContent.waifus[0],
-          	"ATAGO":jsonContent.waifus[1],
+          	  "ATAGO":jsonContent.waifus[1],
 	          "SYLPHYN":jsonContent.waifus[2],	
 	           }
 	           const embed = new Discord.MessageEmbed()
