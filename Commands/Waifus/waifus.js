@@ -5,7 +5,7 @@ const fs = require('fs');
 var contents = fs.readFileSync("./JSON/waifus.json");
 var jsonContent = JSON.parse(contents);
 
-    class PingCommand extends Command {
+    class WaifuCommand extends Command {
         constructor() {
             super('waifu', {
                 aliases: ['waifu', 'waifus'],
