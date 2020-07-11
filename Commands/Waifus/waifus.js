@@ -39,7 +39,11 @@ registerFont('./Bebas.ttf', { family: 'Bebas' })
 	  ctx.shadowBlur = 20;
 	  ctx.shadowColor = "black";	
 	  ctx.drawImage(waifu, 34, 57, 786, 1164);
-	  ctx.drawImage(cardl, 0, 0, canvas.width, canvas.height);	
+	  ctx.drawImage(cardl, 0, 0, canvas.width, canvas.height);
+	  ctx.font = '35px Bebas';
+	  ctx.fillStyle = '#ffffff';
+	  ctx.textAlign = "center";
+	  ctx.fillText(`Anime`, 588, 1186);	
 	  const attachment = new discord.MessageAttachment(canvas.toBuffer(), 'welcome-image.png');
 	  message.channel.send(`:round_pushpin:  |  Profile card of ${message.author.username}`, attachment);	
         }
