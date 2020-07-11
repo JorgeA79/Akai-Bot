@@ -31,8 +31,10 @@ registerFont('./Bebas.ttf', { family: 'Bebas' })
           const canvas = Canvas.createCanvas(850, 1262);
 	  const ctx = canvas.getContext('2d');
           const bgl = await Canvas.loadImage('./Commands/Waifus/Cards/BackgroundL.png');
+	  const waifu = await Canvas.loadImage('./Commands/Waifus/Cards/List/Atago.png');		
 	  const cardl = await Canvas.loadImage('./Commands/Waifus/Cards/CardInfoL.png');			
 	  ctx.drawImage(bgl, 0, 0, canvas.width, canvas.height);
+	  ctx.drawImage(waifu, 44, 72, 786, 1164);	
 	  ctx.drawImage(cardl, 0, 0, canvas.width, canvas.height);	
 	  const attachment = new discord.MessageAttachment(canvas.toBuffer(), 'welcome-image.png');
 	  message.channel.send(`:round_pushpin:  |  Profile card of ${message.author.username}`, attachment);	
