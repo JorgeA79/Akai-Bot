@@ -18,7 +18,7 @@ registerFont('./Bebas.ttf', { family: 'Bebas' })
                 category: 'Anime',
                 description: {
                     usage: 'waifu',
-                    examples: ['waifu Uraraka'],
+                    examples: ['waifu'],
                     description: 'Waifus! Display\'s your waifus information'
                 },
                 cooldown: 2000,
@@ -31,7 +31,7 @@ registerFont('./Bebas.ttf', { family: 'Bebas' })
           const canvas = Canvas.createCanvas(850, 1262);
 	  const ctx = canvas.getContext('2d');
           const bgl = await Canvas.loadImage('./Commands/Waifus/Cards/BackgroundL.png');
-	  const waifu = await Canvas.loadImage('./Commands/Waifus/Cards/List/Atago.png');		
+	  const waifu = await Canvas.loadImage('./Commands/Waifus/Cards/List/Uraraka.png');		
 	  const cardl = await Canvas.loadImage('./Commands/Waifus/Cards/CardInfoL.png');			
 	  ctx.drawImage(bgl, 0, 0, canvas.width, canvas.height);
 	  ctx.drawImage(waifu, 34, 57, 786, 1164);	
