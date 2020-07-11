@@ -40,13 +40,24 @@ registerFont('./Bebas.ttf', { family: 'Bebas' })
 	  ctx.shadowColor = "black";	
 	  ctx.drawImage(waifu, 34, 57, 786, 1164);
 	  ctx.drawImage(cardl, 0, 0, canvas.width, canvas.height);
-	  ctx.font = '48px Bebas';
+
+	  ctx.font = applyText(canvas, `${waifuI.anime}!`);
 	  ctx.fillStyle = '#ffffff';
-	  ctx.textAlign = "right";
-	  ctx.fillText(`${waifuI.anime}`, 588, 1186);	
+	  ctx.textAlign = "center";	
+	  ctx.fillText(`${waifuI.anime}!`, 250, canvas.height / 1.71);	
 	  const attachment = new discord.MessageAttachment(canvas.toBuffer(), 'welcome-image.png');
 	  message.channel.send(`:round_pushpin:  |  Profile card of ${message.author.username}`, attachment);	
         }
     }
+
+const applyText = (canvas, text) => {
+	const ctx = canvas.getContext('2d');
+	let fontSize = 55;
+	do {
+
+	ctx.font = `${fontSize -= 10}px Bebas`;
+	} while (ctx.measureText(text).width > canvas.width - 270);
+	return ctx.font;
+};
 
 module.exports = WaifuCommand;
