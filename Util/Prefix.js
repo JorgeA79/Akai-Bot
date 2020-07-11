@@ -15,10 +15,5 @@ class CustomClient extends AkairoClient {
             dataColumn: 'settings'
         });
 
-        // Or, with sequelize
-        this.settings = new SequelizeProvider(/* Sequelize model here */, {
-            idColumn: 'guild_id',
-            dataColumn: 'settings'
-        });
     }
 }
