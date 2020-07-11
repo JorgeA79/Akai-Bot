@@ -21,8 +21,8 @@ registerFont('./Bebas.ttf', { family: 'Bebas' })
                     examples: ['waifu'],
                     description: 'Waifus! Display\'s your waifus information'
                 },
-                cooldown: 2000,
-                ratelimit: 3
+                cooldown: 72000,
+                ratelimit: 5
             })
         }
 
