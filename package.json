@@ -26,6 +26,7 @@
     "node-fetch": "^2.6.0",
     "querystring": "^0.2.0",
     "sqlite": "^3.0.3",
+    "moment": "2.26.0",    
     "util": "^0.12.1"
   }
 }
