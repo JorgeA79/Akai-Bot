@@ -34,6 +34,7 @@ const { MessageEmbed } = require('discord.js');
                 .addField("**ID:**", `${target.id}`, true)
                 .addField("**Status:**", `${target.presence.status}`, true)
                 .addField("**Created At:**", `${target.createdAt}`, true)
+                .addField("\u200b", `\u200b`, true)
                 .setFooter(`PixelBot | Have a nice day!`);
 
             message.channel.send(uEmbed);
