@@ -40,7 +40,7 @@ registerFont('./Bebas.ttf', { family: 'Bebas' })
 	  ctx.shadowColor = "black";	
 	  ctx.drawImage(waifu, 34, 57, 786, 1164);
 	  ctx.drawImage(cardl, 0, 0, canvas.width, canvas.height);
-	  ctx.font = '35px Bebas';
+	  ctx.font = '48px Bebas';
 	  ctx.fillStyle = '#ffffff';
 	  ctx.textAlign = "center";
 	  ctx.fillText(`Anime`, 588, 1186);	
