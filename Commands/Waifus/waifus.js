@@ -49,7 +49,6 @@ registerFont('./Bebas.ttf', { family: 'Bebas' })
 	  const attachment = new discord.MessageAttachment(canvas.toBuffer(), 'welcome-image.png');
   	  
 	  const embed = new discord.MessageEmbed()
-	  .setTitle(waifuI.displayName)
 	  .setColor(waifuI.color)
  	  .attachFiles([attachment])
 	  .setImage('attachment://welcome-image.png');	 	
