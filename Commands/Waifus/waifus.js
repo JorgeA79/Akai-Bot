@@ -33,6 +33,7 @@ var jsonContent = JSON.parse(contents);
 	          "SYLPHYN":jsonContent.waifus[2],	
 	           }
 	           const embed = new MessageEmbed()
+		      .setColor(this.client.colors['defaultColor'])
 	              .setTitle(waifus[args[1].toUpperCase()].displayName)
 	              .setDescription(waifus[args[1].toUpperCase()].description)
 	              .addField("Anime/Game:", waifus[args[1].toUpperCase()].anime, true)
