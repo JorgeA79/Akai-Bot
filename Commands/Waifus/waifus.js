@@ -44,7 +44,7 @@ registerFont('./Bebas.ttf', { family: 'Bebas' })
 	  ctx.font = applyText(canvas, `${waifuI.anime}!`);
 	  ctx.fillStyle = '#ffffff';
 	  ctx.textAlign = "center";	
-	  ctx.fillText(`${waifuI.anime}!`, 589, 1186);	
+	  ctx.fillText(`${waifuI.anime}!`, 800, 1186);	
 	  const attachment = new discord.MessageAttachment(canvas.toBuffer(), 'welcome-image.png');
 	  message.channel.send(`:round_pushpin:  |  Profile card of ${message.author.username}`, attachment);	
         }
