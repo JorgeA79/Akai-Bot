@@ -5,6 +5,12 @@ const fs = require('fs');
 var contents = fs.readFileSync("./JSON/waifus.json");
 var jsonContent = JSON.parse(contents);
 
+const Canvas = require('canvas');
+const { join } = require('path');
+const { registerFont } = require('canvas');
+registerFont('./Fonts/Bebas.ttf', { family: 'Bebas' })
+
+
     class WaifuCommand extends Command {
         constructor() {
             super('waifu', {
@@ -22,24 +28,8 @@ var jsonContent = JSON.parse(contents);
 
         async exec(message) {
             
-            const args = message.content.slice('p!').split(` `);
-		
-	          if (!args[1]) {
-	          return message.channel.send("You need to specify a Waifu");
-	          }
-            	  const waifus = {
-	          "URARAKA":jsonContent.waifus[0],
-          	  "ATAGO":jsonContent.waifus[1],
-	          "SYLPHYN":jsonContent.waifus[2],	
-	           }
-	           const embed = new MessageEmbed()
-		      .setColor(this.client.colors['defaultColor'])
-	              .setTitle(waifus[args[1].toUpperCase()].displayName)
-	              .setDescription(waifus[args[1].toUpperCase()].description)
-	              .addField("Anime/Game:", waifus[args[1].toUpperCase()].anime, true)
-	              .addField("Gender:", waifus[args[1].toUpperCase()].gender, true)
-	              .setThumbnail(waifus[args[1].toUpperCase()].image)
-	           return message.channel.send(embed);
+          const canvas = Canvas.createCanvas(500, 500);
+	  const ctx = canvas.getContext('2d');
             
         }
     }
