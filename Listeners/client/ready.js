@@ -18,10 +18,9 @@ const { Listener } = require('discord-akairo');
                 }) */
 
             let statuses = [
-                `a:help | ${this.client.users.size} users`,
-                `a:help | ${this.client.guilds.size} guilds`,
-                `a:help | ${this.client.channels.size} channels`,
-                `a:help | Owner: ${this.client.users.fetch('535585397435006987').tag}`
+                `p!help | ${this.client.users.cache.size} users`,
+                `p!help | ${this.client.guilds.cache.size} guilds`,
+                `p!help | ${this.client.channels.cache.size} channels`
             ], i = 0;
 
                 this.client.user.setStatus('dnd');
