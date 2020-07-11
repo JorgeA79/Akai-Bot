@@ -13,7 +13,7 @@ var jsonContent = JSON.parse(contents);
                 description: {
                     usage: 'waifu',
                     examples: ['waifu Uraraka'],
-                    description: 'Waifus! Display's your waifus information'
+                    description: 'Waifus! Display\'s your waifus information'
                 },
                 cooldown: 2000,
                 ratelimit: 3
