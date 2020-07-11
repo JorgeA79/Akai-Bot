@@ -49,7 +49,7 @@ registerFont('./Bebas.ttf', { family: 'Bebas' })
 	  const attachment = new discord.MessageAttachment(canvas.toBuffer(), 'welcome-image.png');
   	  
 	  const embed = new discord.MessageEmbed()	
- 	  .attachFile(attachment)
+ 	  .attachFiles([attachment])
 	  .setImage('attachment://welcome-image.png');	 	
 	  message.channel.send(embed);	
         }
