@@ -8,7 +8,7 @@ var jsonContent = JSON.parse(contents);
 const Canvas = require('canvas');
 const { join } = require('path');
 const { registerFont } = require('canvas');
-registerFont('./Fonts/Bebas.ttf', { family: 'Bebas' })
+registerFont('./Bebas.ttf', { family: 'Bebas' })
 
 
     class WaifuCommand extends Command {
