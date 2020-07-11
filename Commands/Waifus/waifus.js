@@ -28,7 +28,7 @@ registerFont('./Bebas.ttf', { family: 'Bebas' })
 
         async exec(message) {
             
-	 const waifu = jsonContents.waifus[Math.floor(Math.random() * jsonContents.waifus.length)]	
+	 const waifu = jsonContent.waifus[Math.floor(Math.random() * jsonContent.waifus.length)]	
 		
           const canvas = Canvas.createCanvas(850, 1262);
 	  const ctx = canvas.getContext('2d');
