@@ -12,7 +12,7 @@ const { MessageEmbed } = require('discord.js');
         exec(message, command, remaining) {
             const embed = new MessageEmbed()
                 .setColor(this.client.colors['red'])
-                .setDescription(`${this.client.emojis.get('660343595626397699')} You are on a cooldown for the command: \`${command}\`. Please wait: \`${remaining.toFixed(2) / 1000}s\``)
+                .setDescription(`⚙️ You are on a cooldown for the command: \`${command}\`. Please wait: \`${remaining.toFixed(2) / 1000}s\``)
             return message.channel.send({ embed });
         }
     }
