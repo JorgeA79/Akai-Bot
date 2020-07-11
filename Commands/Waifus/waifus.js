@@ -36,10 +36,8 @@ registerFont('./Bebas.ttf', { family: 'Bebas' })
 	  const waifu = await Canvas.loadImage(waifuI.image);		
 	  const cardl = await Canvas.loadImage('./Commands/Waifus/Cards/CardInfoL.png');			
 	  ctx.drawImage(bgl, 0, 0, canvas.width, canvas.height);
-	  ctx.shadowColor = '#998';
- 	  ctx.shadowBlur = 5;
-	  ctx.shadowOffsetX = 20;
-	  ctx.shadowOffsetY = 20;		
+	  ctx.shadowBlur = 20;
+	  ctx.shadowColor = "black";	
 	  ctx.drawImage(waifu, 34, 57, 786, 1164);
 	  ctx.drawImage(cardl, 0, 0, canvas.width, canvas.height);	
 	  const attachment = new discord.MessageAttachment(canvas.toBuffer(), 'welcome-image.png');
