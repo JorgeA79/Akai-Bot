@@ -55,7 +55,7 @@ registerFont('./Bebas.ttf', { family: 'Bebas' })
 	  message.channel.send(embed)
 	  .then(msg => { msg.react('❤️')
 			
-	  const filter = (reaction) => reaction.emoji.name === '❤️';
+	  const filter = (reaction, user) => reaction.emoji.name === '❤️'
 			
           	msg.channel.awaitMessages(filter, { max: 1, time: 30000, errors: ['time'] })
 		.then(collected => {
