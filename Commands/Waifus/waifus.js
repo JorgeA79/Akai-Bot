@@ -57,9 +57,9 @@ registerFont('./Bebas.ttf', { family: 'Bebas' })
 			
 	  const filter = (reaction) => reaction.emoji.name === '❤️'
 			
-          	msg.awaitReactions(filter, { max: 1, time: 30000, errors: ['time'] })
+          	msg.awaitReactions(filter, { max: 2, time: 30000, errors: ['time'] })
 		.then(collected => {
-		msg.channel.send(`${collected.first().author} got the correct answer!`);
+		msg.channel.send(`${collected.last().author} got the correct answer!`);
 		})
 		.catch(collected => {
 		msg.channel.send('Looks like nobody got the answer this time.');
