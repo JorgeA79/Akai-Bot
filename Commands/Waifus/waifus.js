@@ -60,7 +60,10 @@ registerFont('./Bebas.ttf', { family: 'Bebas' })
 		};				
           	msg.awaitReactions(filter, { max: 1, time: 30000, errors: ['time'] })
 		.then(collected => {
-		msg.channel.send(`${waifuI.displayName} was added to your collection!`);
+		const embedC = new discord.MessageEmbed()
+		.setDescription(`${waifuI.displayName} was added to your collection!`)
+		.setColor(waifuI.color)
+		msg.channel.send(embedC);
 		})
 		.catch(collected => {
 		return;
