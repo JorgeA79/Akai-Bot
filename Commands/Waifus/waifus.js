@@ -58,9 +58,9 @@ registerFont('./Bebas.ttf', { family: 'Bebas' })
 		const filter = (reaction, user) => {
 		return ['❤️'].includes(reaction.emoji.name) && user.id === message.author.id;
 		};				
-          	msg.awaitReactions(filter, { max: 2, time: 30000, errors: ['time'] })
+          	msg.awaitReactions(filter, { max: 1, time: 30000, errors: ['time'] })
 		.then(collected => {
-		msg.channel.send(`${collected.last().author} got the correct answer!`);
+		msg.channel.send(`${waifuI.displayName} was added to your collection!`);
 		})
 		.catch(collected => {
 		return;
