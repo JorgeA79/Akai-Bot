@@ -54,7 +54,18 @@ registerFont('./Bebas.ttf', { family: 'Bebas' })
 	  .setImage('attachment://welcome-image.png');	 	
 	  message.channel.send(embed)
 	  .then(msg => { msg.react('❤️')
-		       })
+			
+	  const filter = (reaction) => reaction.emoji.name === '❤️';
+			
+          	msg.channel.awaitMessages(filter, { max: 1, time: 30000, errors: ['time'] })
+		.then(collected => {
+		msg.channel.send(`${collected.first().author} got the correct answer!`);
+		})
+		.catch(collected => {
+		msg.channel.send('Looks like nobody got the answer this time.');
+		});   
+    	   			
+	 })
         }
     }
 
