@@ -55,14 +55,15 @@ registerFont('./Bebas.ttf', { family: 'Bebas' })
 	  message.channel.send(embed)
 	  .then(msg => { msg.react('❤️')
 			
-	  const filter = (reaction) => reaction.emoji.name === '❤️'
-			
+		const filter = (reaction, user) => {
+		return ['❤️'].includes(reaction.emoji.name) && user.id === message.author.id;
+		};				
           	msg.awaitReactions(filter, { max: 2, time: 30000, errors: ['time'] })
 		.then(collected => {
 		msg.channel.send(`${collected.last().author} got the correct answer!`);
 		})
 		.catch(collected => {
-		msg.channel.send('Looks like nobody got the answer this time.');
+		return;
 		});   
     	   			
 	 })
