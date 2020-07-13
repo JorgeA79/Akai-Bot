@@ -10,7 +10,7 @@ const BotColors = require('./Util/Colors');
 
                 this.commandHandler = new CommandHandler(this, {
                     allowMention: true,
-                    prefix: 'at!',
+                    prefix: 'xd!',
                     classToHandle: Command,
                     commandUtil: true,
                     handleEdits: true,
