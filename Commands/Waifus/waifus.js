@@ -46,7 +46,7 @@ registerFont('./Bebas.ttf', { family: 'Bebas' })
 	  ctx.fillStyle = waifuI.color;	
 	  ctx.textAlign = "right";	
 	  ctx.fillText(`${waifuI.anime}!`, 800, 1205);	
-	  wrapText(waifuI.description, 600, 800, 750, 20, 'Bebas', ctx)	
+	  wrapText(waifuI.description, 1000, 800, 750, 20, 'Bebas', ctx)	
 	  const attachment = new discord.MessageAttachment(canvas.toBuffer(), 'welcome-image.png');
   	  
 	  const embed = new discord.MessageEmbed()
@@ -89,7 +89,7 @@ function wrapText(text, x, y, maxWidth, fontSize, fontFace, ctx){
   var firstY=y;
   var words = text.split(' ');
   var line = '';
-  var lineHeight=fontSize*1.286; // a good approx for 10-18px sizes
+  var lineHeight=fontSize*5; // a good approx for 10-18px sizes
 
   ctx.font=fontSize+" "+fontFace;
   ctx.textBaseline='top';
