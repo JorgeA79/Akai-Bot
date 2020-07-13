@@ -46,6 +46,7 @@ registerFont('./Bebas.ttf', { family: 'Bebas' })
 	  ctx.fillStyle = waifuI.color;	
 	  ctx.textAlign = "right";	
 	  ctx.fillText(`${waifuI.anime}!`, 800, 1205);	
+	  wrapText(waifuI.Description, 200, 500, 500, 40, 'Bebas', ctx)	
 	  const attachment = new discord.MessageAttachment(canvas.toBuffer(), 'welcome-image.png');
   	  
 	  const embed = new discord.MessageEmbed()
@@ -82,5 +83,33 @@ const applyText = (canvas, text) => {
 	} while (ctx.measureText(text).width > canvas.width - 500);
 	return ctx.font;
 };
+
+
+function wrapText(text, x, y, maxWidth, fontSize, fontFace, ctx){
+  var firstY=y;
+  var words = text.split(' ');
+  var line = '';
+  var lineHeight=fontSize*1.286; // a good approx for 10-18px sizes
+
+  ctx.font=fontSize+" "+fontFace;
+  ctx.textBaseline='top';
+
+  for(var n = 0; n < words.length; n++) {
+    var testLine = line + words[n] + ' ';
+    var metrics = ctx.measureText(testLine);
+    var testWidth = metrics.width;
+    if(testWidth > maxWidth) {
+      ctx.fillText(line, x, y);
+      if(n<words.length-1){
+          line = words[n] + ' ';
+          y += lineHeight;
+      }
+    }
+    else {
+      line = testLine;
+    }
+  }
+  ctx.fillText(line, x, y);
+}
 
 module.exports = WaifuCommand;
