@@ -46,7 +46,7 @@ registerFont('./Bebas.ttf', { family: 'Bebas' })
 	  ctx.fillStyle = waifuI.color;	
 	  ctx.textAlign = "right";	
 	  ctx.fillText(`${waifuI.anime}!`, 800, 1205);	
-	  wrapText(waifuI.description, 425, 700, 700, 30, 'Bebas', ctx)	
+	  wrapText(waifuI.description, 600, 800, 750, 20, 'Bebas', ctx)	
 	  const attachment = new discord.MessageAttachment(canvas.toBuffer(), 'welcome-image.png');
   	  
 	  const embed = new discord.MessageEmbed()
